@@ -350,7 +350,7 @@ Moonboots.prototype.browserify = function (setHash, done) {
                 if (self.result.js.source.trim().slice(-1) !== ';') {
                     js = ';' + js;
                 }
-                self.result.js.source = self.result.js.source + js;
+                self.result.js.source = js + self.result.js.source;
                 next(err);
             });
         },
